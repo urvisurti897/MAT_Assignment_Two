@@ -15,6 +15,6 @@ export default function paintRequiredCalculator(area: number, coveragePerLiter: 
   if (coveragePerLiter < 0){
     throw new Error("Coverage Per Liter should be positive");
   }
-
+  
   return area / coveragePerLiter;
 }
