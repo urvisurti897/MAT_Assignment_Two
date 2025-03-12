@@ -6,10 +6,6 @@ export default function calculateCanvasSize(
   const lengthNum = parseInt(length);
   const widthNum = parseInt(width);
 
-  if (isNaN(lengthNum) || isNaN(widthNum)) {
-    throw new Error("Both length and width must be valid numbers");
-  }
-
   if (lengthNum < 0){
     throw new Error("Length should be positive");
   }
@@ -24,6 +20,13 @@ export default function calculateCanvasSize(
 
   if (widthNum == 0){
     throw new Error("Width should not be zero");
+  }
+
+  if (isNaN(lengthNum)) {
+    throw new Error("Length should not be non-numeric");
+  }
+  if (isNaN(widthNum)) {
+    throw new Error("Width should not be non-numeric");
   }
 
   return (lengthNum) * (widthNum);
