@@ -22,6 +22,17 @@ describe("paint required calculator", () => {
     expect(() => paintRequiredCalculator(50, -10)).toThrow("Coverage Per Liter should be positive");
   });
 
+
+  test("should handle when area is a decimal number", () => {
+    expect(() => paintRequiredCalculator(2.5, 10)).toThrow("Area should not be decimal number");
+  });
+
+  test("should handle when coveragePerLiter is a decimal number", () => {
+    expect(() => paintRequiredCalculator(50, 4.5)).toThrow("Coverage Per Liter should not be decimal number");
+  });
+
+
+
   test.todo("should handle when area is a decimal number");
   test.todo("should handle when coveragePerLiter is a decimal number");
 });
