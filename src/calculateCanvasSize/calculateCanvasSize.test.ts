@@ -11,4 +11,6 @@ describe("calculateCanvasSize", () => {
   test.todo("should throw an error if width is negative");
   test.todo("should throw an error if length is zero");
   test.todo("should throw an error if width is zero");
+  test.todo("should throw an error if length is non-numeric");
+  test.todo("should throw an error if width is non-numeric");
 });
